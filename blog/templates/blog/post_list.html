@@ -11,13 +11,14 @@
     from a crowd favorite to a straight-up battle cry</p>
     </div>
 
-    <div>
-      <<h3>Nasty by Janet Jackson</h3>
-      <p>After Donald Trump called Hillary Clinton <em>such a nasty woman</em>
-        in the 2016 election, Jackson's 1986 hit's Spotify plays increased by 250 percent, becoming an unofficial theme song for the incident.
-      <em>Nasty boys don't mean a thing</em>,Janet sings, but nasty women, on the other hand, get sh*t done</p>
-</div>
 
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 <div>
   <h2>Queen by Janelle Monae and Erykah Badu</h2>
   <p>This power duo shows it's okay to be provocative,
